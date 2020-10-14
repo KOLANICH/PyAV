@@ -1,7 +1,8 @@
-from av.audio.format cimport get_audio_format
-from av.audio.frame cimport alloc_audio_frame
-from av.audio.layout cimport get_audio_layout
-from av.error cimport err_check
+from __future__ import absolute_import
+from .format cimport get_audio_format
+from .frame cimport alloc_audio_frame
+from .layout cimport get_audio_layout
+from ..error cimport err_check
 
 
 cdef class AudioFifo:

@@ -1,8 +1,9 @@
+from __future__ import absolute_import
 cimport libav as lib
 
-from av.buffer cimport Buffer
-from av.bytesource cimport ByteSource
-from av.stream cimport Stream
+from .buffer cimport Buffer
+from .bytesource cimport ByteSource
+from .stream cimport Stream
 
 
 cdef class Packet(Buffer):

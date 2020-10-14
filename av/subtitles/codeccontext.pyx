@@ -1,9 +1,10 @@
+from __future__ import absolute_import
 cimport libav as lib
 
-from av.error cimport err_check
-from av.frame cimport Frame
-from av.packet cimport Packet
-from av.subtitles.subtitle cimport SubtitleProxy, SubtitleSet
+from ..error cimport err_check
+from ..frame cimport Frame
+from ..packet cimport Packet
+from .subtitle cimport SubtitleProxy, SubtitleSet
 
 
 cdef class SubtitleCodecContext(CodecContext):

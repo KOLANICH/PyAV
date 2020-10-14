@@ -1,7 +1,8 @@
+from __future__ import absolute_import
 cimport libav as lib
 
-from av.container.core cimport Container
-from av.stream cimport Stream
+from .core cimport Container
+from ..stream cimport Stream
 
 
 cdef class InputContainer(Container):

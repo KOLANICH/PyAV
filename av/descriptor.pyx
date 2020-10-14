@@ -1,3 +1,4 @@
+from __future__ import absolute_import
 cimport libav as lib
 
 from .option cimport Option, OptionChoice, wrap_option, wrap_option_choice

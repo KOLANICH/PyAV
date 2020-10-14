@@ -3,7 +3,7 @@ try:
 except ImportError:
     from collections import MutableMapping
 
-from av.error cimport err_check
+from .error cimport err_check
 
 
 cdef class _Dictionary(object):

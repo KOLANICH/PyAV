@@ -1,4 +1,5 @@
-from av.video.frame cimport VideoFrame
+from __future__ import absolute_import
+from .frame cimport VideoFrame
 
 
 cdef class VideoPlane(Plane):

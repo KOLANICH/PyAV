@@ -1,11 +1,12 @@
+from __future__ import absolute_import
 cimport libav as lib
 
-from av.audio.format cimport AudioFormat, get_audio_format
-from av.audio.frame cimport AudioFrame, alloc_audio_frame
-from av.audio.layout cimport AudioLayout, get_audio_layout
-from av.error cimport err_check
-from av.frame cimport Frame
-from av.packet cimport Packet
+from .format cimport AudioFormat, get_audio_format
+from .frame cimport AudioFrame, alloc_audio_frame
+from .layout cimport AudioLayout, get_audio_layout
+from ..error cimport err_check
+from ..frame cimport Frame
+from ..packet cimport Packet
 
 
 cdef class AudioCodecContext(CodecContext):

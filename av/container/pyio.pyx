@@ -1,8 +1,9 @@
+from __future__ import absolute_import
 from libc.string cimport memcpy
 cimport libav as lib
 
-from av.container.core cimport Container
-from av.error cimport stash_exception
+from .core cimport Container
+from ..error cimport stash_exception
 
 
 cdef int pyio_read(void *opaque, uint8_t *buf, int buf_size) nogil:

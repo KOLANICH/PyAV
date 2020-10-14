@@ -1,4 +1,5 @@
-from av.plane cimport Plane
+from __future__ import absolute_import
+from ..plane cimport Plane
 
 
 cdef class AudioPlane(Plane):

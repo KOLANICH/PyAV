@@ -1,14 +1,15 @@
+from __future__ import absolute_import
 from libc.stdint cimport int64_t
 from libc.stdlib cimport free, malloc
 
-from av.container.streams cimport StreamContainer
-from av.dictionary cimport _Dictionary
-from av.error cimport err_check
-from av.packet cimport Packet
-from av.stream cimport Stream, wrap_stream
-from av.utils cimport avdict_to_dict
+from .streams cimport StreamContainer
+from ..dictionary cimport _Dictionary
+from ..error cimport err_check
+from ..packet cimport Packet
+from ..stream cimport Stream, wrap_stream
+from ..utils cimport avdict_to_dict
 
-from av.dictionary import Dictionary
+from ..dictionary import Dictionary
 
 
 cdef close_input(InputContainer self):

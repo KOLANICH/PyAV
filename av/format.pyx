@@ -1,7 +1,7 @@
 cimport libav as lib
 
-from av.descriptor cimport wrap_avclass
-from av.enum cimport define_enum
+from .descriptor cimport wrap_avclass
+from .enum cimport define_enum
 
 
 cdef object _cinit_bypass_sentinel = object()

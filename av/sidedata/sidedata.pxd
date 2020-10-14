@@ -1,9 +1,8 @@
-
 cimport libav as lib
 
-from av.buffer cimport Buffer
-from av.dictionary cimport _Dictionary, wrap_dictionary
-from av.frame cimport Frame
+from ..buffer cimport Buffer
+from ..dictionary cimport _Dictionary, wrap_dictionary
+from ..frame cimport Frame
 
 
 cdef class SideData(Buffer):

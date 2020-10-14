@@ -1,10 +1,11 @@
+from __future__ import absolute_import
 from libc.stdint cimport int64_t
 cimport libav as lib
 
-from av.codec.context cimport CodecContext
-from av.container.core cimport Container
-from av.frame cimport Frame
-from av.packet cimport Packet
+from .codec.context cimport CodecContext
+from .container.core cimport Container
+from .frame cimport Frame
+from .packet cimport Packet
 
 
 cdef class Stream(object):

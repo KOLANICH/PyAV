@@ -1,8 +1,9 @@
-from av.audio.format cimport get_audio_format
-from av.audio.layout cimport get_audio_layout
-from av.audio.plane cimport AudioPlane
-from av.deprecation import renamed_attr
-from av.error cimport err_check
+from __future__ import absolute_import
+from .format cimport get_audio_format
+from .layout cimport get_audio_layout
+from .plane cimport AudioPlane
+from ..deprecation import renamed_attr
+from ..error cimport err_check
 
 
 cdef object _cinit_bypass_sentinel

@@ -1,10 +1,11 @@
+from __future__ import absolute_import
 from libc.stdint cimport uint8_t
 cimport libav as lib
 
-from av.enum cimport define_enum
-from av.error cimport err_check
-from av.video.format cimport VideoFormat
-from av.video.frame cimport alloc_video_frame
+from ..enum cimport define_enum
+from ..error cimport err_check
+from .format cimport VideoFormat
+from .frame cimport alloc_video_frame
 
 
 Interpolation = define_enum('Interpolation', __name__, (

@@ -1,10 +1,11 @@
+from __future__ import absolute_import
 from libc.stdint cimport int64_t, uint8_t, uint64_t
 
 from fractions import Fraction
 
 cimport libav as lib
 
-from av.error cimport err_check
+from .error cimport err_check
 
 
 # === DICTIONARIES ===

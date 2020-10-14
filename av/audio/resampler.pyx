@@ -1,13 +1,14 @@
+from __future__ import absolute_import
 from libc.stdint cimport int64_t, uint8_t
 cimport libav as lib
 
-from av.audio.fifo cimport AudioFifo
-from av.audio.format cimport get_audio_format
-from av.audio.frame cimport alloc_audio_frame
-from av.audio.layout cimport get_audio_layout
-from av.error cimport err_check
+from .fifo cimport AudioFifo
+from .format cimport get_audio_format
+from .frame cimport alloc_audio_frame
+from .layout cimport get_audio_layout
+from ..error cimport err_check
 
-from av.error import FFmpegError
+from ..error import FFmpegError
 
 
 cdef class AudioResampler(object):

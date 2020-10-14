@@ -1,6 +1,7 @@
+from __future__ import absolute_import
 cimport libav as lib
 
-from av.audio.frame cimport AudioFrame
+from .frame cimport AudioFrame
 
 
 cdef class AudioPlane(Plane):

@@ -1,13 +1,14 @@
+from __future__ import absolute_import
 from fractions import Fraction
 
-from av.audio.format cimport AudioFormat
-from av.audio.frame cimport AudioFrame
-from av.audio.layout cimport AudioLayout
-from av.error cimport err_check
-from av.filter.context cimport FilterContext, wrap_filter_context
-from av.filter.filter cimport Filter, wrap_filter
-from av.video.format cimport VideoFormat
-from av.video.frame cimport VideoFrame
+from ..audio.format cimport AudioFormat
+from ..audio.frame cimport AudioFrame
+from ..audio.layout cimport AudioLayout
+from ..error cimport err_check
+from .context cimport FilterContext, wrap_filter_context
+from .filter cimport Filter, wrap_filter
+from ..video.format cimport VideoFormat
+from ..video.frame cimport VideoFrame
 
 
 cdef class Graph(object):

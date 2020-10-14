@@ -1,9 +1,10 @@
+from __future__ import absolute_import
 from libc.stdint cimport uint64_t
 cimport libav as lib
 
-from av.audio.format cimport AudioFormat
-from av.audio.frame cimport AudioFrame
-from av.audio.layout cimport AudioLayout
+from .format cimport AudioFormat
+from .frame cimport AudioFrame
+from .layout cimport AudioLayout
 
 
 cdef class AudioResampler(object):

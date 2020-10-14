@@ -1,6 +1,7 @@
+from __future__ import absolute_import
 cimport libav as lib
 
-from av.packet cimport Packet
+from ..packet cimport Packet
 
 
 cdef class SubtitleProxy(object):

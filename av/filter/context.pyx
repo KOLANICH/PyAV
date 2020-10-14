@@ -1,12 +1,13 @@
+from __future__ import absolute_import
 from libc.string cimport memcpy
 
-from av.audio.frame cimport AudioFrame, alloc_audio_frame
-from av.dictionary cimport _Dictionary
-from av.dictionary import Dictionary
-from av.error cimport err_check
-from av.filter.pad cimport alloc_filter_pads
-from av.frame cimport Frame
-from av.video.frame cimport VideoFrame, alloc_video_frame
+from ..audio.frame cimport AudioFrame, alloc_audio_frame
+from ..dictionary cimport _Dictionary
+from ..dictionary import Dictionary
+from ..error cimport err_check
+from .pad cimport alloc_filter_pads
+from ..frame cimport Frame
+from ..video.frame cimport VideoFrame, alloc_video_frame
 
 
 cdef object _cinit_sentinel = object()

@@ -1,16 +1,17 @@
+from __future__ import absolute_import
 from fractions import Fraction
 import logging
 import os
 
-from av.codec.codec cimport Codec
-from av.container.streams cimport StreamContainer
-from av.dictionary cimport _Dictionary
-from av.error cimport err_check
-from av.packet cimport Packet
-from av.stream cimport Stream, wrap_stream
-from av.utils cimport dict_to_avdict
+from ..codec.codec cimport Codec
+from .streams cimport StreamContainer
+from ..dictionary cimport _Dictionary
+from ..error cimport err_check
+from ..packet cimport Packet
+from ..stream cimport Stream, wrap_stream
+from ..utils cimport dict_to_avdict
 
-from av.dictionary import Dictionary
+from ..dictionary import Dictionary
 
 
 log = logging.getLogger(__name__)

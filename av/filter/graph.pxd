@@ -1,6 +1,7 @@
+from __future__ import absolute_import
 cimport libav as lib
 
-from av.filter.context cimport FilterContext
+from .context cimport FilterContext
 
 
 cdef class Graph(object):

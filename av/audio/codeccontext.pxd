@@ -1,8 +1,9 @@
+from __future__ import absolute_import
 
-from av.audio.fifo cimport AudioFifo
-from av.audio.frame cimport AudioFrame
-from av.audio.resampler cimport AudioResampler
-from av.codec.context cimport CodecContext
+from .fifo cimport AudioFifo
+from .frame cimport AudioFrame
+from .resampler cimport AudioResampler
+from ..codec.context cimport CodecContext
 
 
 cdef class AudioCodecContext(CodecContext):

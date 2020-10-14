@@ -1,19 +1,20 @@
+from __future__ import absolute_import
 from cpython cimport PyWeakref_NewRef
 from libc.stdint cimport int64_t, uint8_t
 from libc.string cimport memcpy
 cimport libav as lib
 
-from av.codec.context cimport wrap_codec_context
-from av.error cimport err_check
-from av.packet cimport Packet
-from av.utils cimport (
+from .codec.context cimport wrap_codec_context
+from .error cimport err_check
+from .packet cimport Packet
+from .utils cimport (
     avdict_to_dict,
     avrational_to_fraction,
     dict_to_avdict,
     to_avrational
 )
 
-from av import deprecation
+from . import deprecation
 
 
 cdef object _cinit_bypass_sentinel = object()
@@ -33,16 +34,16 @@ cdef Stream wrap_stream(Container container, lib.AVStream *c_stream):
     cdef Stream py_stream
 
     if c_stream.codec.codec_type == lib.AVMEDIA_TYPE_VIDEO:
-        from av.video.stream import VideoStream
+        from .video.stream import VideoStream
         py_stream = VideoStream.__new__(VideoStream, _cinit_bypass_sentinel)
     elif c_stream.codec.codec_type == lib.AVMEDIA_TYPE_AUDIO:
-        from av.audio.stream import AudioStream
+        from .audio.stream import AudioStream
         py_stream = AudioStream.__new__(AudioStream, _cinit_bypass_sentinel)
     elif c_stream.codec.codec_type == lib.AVMEDIA_TYPE_SUBTITLE:
-        from av.subtitles.stream import SubtitleStream
+        from .subtitles.stream import SubtitleStream
         py_stream = SubtitleStream.__new__(SubtitleStream, _cinit_bypass_sentinel)
     elif c_stream.codec.codec_type == lib.AVMEDIA_TYPE_DATA:
-        from av.data.stream import DataStream
+        from .data.stream import DataStream
         py_stream = DataStream.__new__(DataStream, _cinit_bypass_sentinel)
     else:
         py_stream = Stream.__new__(Stream, _cinit_bypass_sentinel)

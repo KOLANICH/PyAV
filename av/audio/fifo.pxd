@@ -1,7 +1,8 @@
+from __future__ import absolute_import
 from libc.stdint cimport int64_t, uint64_t
 cimport libav as lib
 
-from av.audio.frame cimport AudioFrame
+from .frame cimport AudioFrame
 
 
 cdef class AudioFifo:

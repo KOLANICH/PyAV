@@ -1,6 +1,7 @@
+from __future__ import absolute_import
 cimport libav as lib
 
-from av.descriptor cimport Descriptor
+from ..descriptor cimport Descriptor
 
 
 cdef class Filter(object):

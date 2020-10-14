@@ -1,6 +1,7 @@
+from __future__ import absolute_import
 cimport libav as lib
 
-from av.logging cimport get_last_error
+from .logging cimport get_last_error
 
 from threading import local
 import errno
@@ -8,7 +9,7 @@ import os
 import sys
 import traceback
 
-from av.enum import define_enum
+from .enum import define_enum
 
 
 # Will get extended with all of the exceptions.

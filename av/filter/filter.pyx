@@ -1,7 +1,8 @@
+from __future__ import absolute_import
 cimport libav as lib
 
-from av.descriptor cimport wrap_avclass
-from av.filter.pad cimport alloc_filter_pads
+from ..descriptor cimport wrap_avclass
+from .pad cimport alloc_filter_pads
 
 
 cdef object _cinit_sentinel = object()

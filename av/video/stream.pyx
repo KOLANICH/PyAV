@@ -1,8 +1,9 @@
+from __future__ import absolute_import
 from libc.stdint cimport int64_t
 cimport libav as lib
 
-from av.container.core cimport Container
-from av.utils cimport avrational_to_fraction
+from ..container.core cimport Container
+from ..utils cimport avrational_to_fraction
 
 
 cdef class VideoStream(Stream):

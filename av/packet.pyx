@@ -1,10 +1,11 @@
+from __future__ import absolute_import
 cimport libav as lib
 
-from av.bytesource cimport bytesource
-from av.error cimport err_check
-from av.utils cimport avrational_to_fraction, to_avrational
+from .bytesource cimport bytesource
+from .error cimport err_check
+from .utils cimport avrational_to_fraction, to_avrational
 
-from av import deprecation
+from . import deprecation
 
 
 cdef class Packet(Buffer):

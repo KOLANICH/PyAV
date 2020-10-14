@@ -1,8 +1,9 @@
-from av.audio.format cimport get_audio_format
-from av.descriptor cimport wrap_avclass
-from av.enum cimport define_enum
-from av.utils cimport avrational_to_fraction, flag_in_bitfield
-from av.video.format cimport get_video_format
+from __future__ import absolute_import
+from ..audio.format cimport get_audio_format
+from ..descriptor cimport wrap_avclass
+from ..enum cimport define_enum
+from ..utils cimport avrational_to_fraction, flag_in_bitfield
+from ..video.format cimport get_video_format
 
 
 cdef object _cinit_sentinel = object()

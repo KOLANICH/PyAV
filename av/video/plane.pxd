@@ -1,5 +1,6 @@
-from av.plane cimport Plane
-from av.video.format cimport VideoFormatComponent
+from __future__ import absolute_import
+from ..plane cimport Plane
+from .format cimport VideoFormatComponent
 
 
 cdef class VideoPlane(Plane):

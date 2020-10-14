@@ -1,9 +1,10 @@
+from __future__ import absolute_import
 cimport libav as lib
 
-from av.container.streams cimport StreamContainer
-from av.dictionary cimport _Dictionary
-from av.format cimport ContainerFormat
-from av.stream cimport Stream
+from .streams cimport StreamContainer
+from ..dictionary cimport _Dictionary
+from ..format cimport ContainerFormat
+from ..stream cimport Stream
 
 
 # Interrupt callback information, times are in seconds.

@@ -1,8 +1,9 @@
+from __future__ import absolute_import
 cimport libav as lib
 
-from av.filter.context cimport FilterContext
-from av.filter.filter cimport Filter
-from av.filter.link cimport FilterLink
+from .context cimport FilterContext
+from .filter cimport Filter
+from .link cimport FilterLink
 
 
 cdef class FilterPad(object):

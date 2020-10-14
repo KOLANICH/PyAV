@@ -1,7 +1,8 @@
+from __future__ import absolute_import
 cimport libav as lib
 
-from av.filter.graph cimport Graph
-from av.filter.pad cimport FilterContextPad
+from .graph cimport Graph
+from .pad cimport FilterContextPad
 
 
 cdef class FilterLink(object):

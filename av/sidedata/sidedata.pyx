@@ -1,6 +1,7 @@
-from av.enum cimport define_enum
+from __future__ import absolute_import
+from ..enum cimport define_enum
 
-from av.sidedata.motionvectors import MotionVectors
+from .motionvectors import MotionVectors
 
 
 try:

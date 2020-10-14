@@ -1,4 +1,5 @@
-from av.filter.link cimport wrap_filter_link
+from __future__ import absolute_import
+from .link cimport wrap_filter_link
 
 
 cdef object _cinit_sentinel = object()
